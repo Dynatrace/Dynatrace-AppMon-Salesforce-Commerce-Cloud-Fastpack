@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+   <extension-point id="com.dynatrace.diagnostics.InstallerContent" name="com.dynatrace.diagnostics.InstallerContent" schema="schema/com.dynatrace.diagnostics.InstallerContent.exsd"/>
+   <extension point="com.dynatrace.diagnostics.InstallerContent">
+      <metainfo installer_type="resourcepack" name="FastPack Resources">
+<resource resource="dashboards/Demandware Business Dashboard.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/Demandware Site Metrics.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/Demandware Third Party Performance.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/Demandware UEM Key Metrics Dashboard.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/Demandware Visit Metrics.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/Demandware Visits.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+	         	
+<resource resource="dashboards/web/27513573-97d8-4680-81c3-be20ae3cf59e.json" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/27513573-97d8-4680-81c3-be20ae3cf59e.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/dc2c5123-eff5-4ecd-9d30-86390358edf5.json" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/dc2c5123-eff5-4ecd-9d30-86390358edf5.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="profiles/Demandware.profile.xml" resource_type="systemProfile">
+		            <instance instance="server"/>
+		        </resource>
+</metainfo>
+   </extension>
+</plugin>

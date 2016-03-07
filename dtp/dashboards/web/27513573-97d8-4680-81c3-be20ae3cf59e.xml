@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
+<dynatrace version="6.3.0.1305">
+  <webuidashboard memento.version="6.3.0.1305">
+    <metadata owner="admin" shared="true" name="Demandware Third Party Performance Analysis" id="27513573-97d8-4680-81c3-be20ae3cf59e" modificationdate="1456948635519" version="16" revision="3033cb6f-6f48-4345-a207-838e3adcee59" />
+  </webuidashboard>
+</dynatrace>
