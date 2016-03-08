@@ -63,7 +63,7 @@ The only measure you may have to customize is Add to Cart, as it is based upon t
 (.*)(?i)add to cart(.*)
 ```
 
-The regular expression looks for a User Action containing 'add to cart' regardless of capitalization and what proceeds or follows it.
+The regular expression looks for a User Action containing 'add to cart' regardless of capitalization and what precedes or follows it.
 
 Add To Cart Business Transaction Measure:
 ![Add To Cart BT](/images_community/download/attachments/215745785/AddToCartBT.png)
