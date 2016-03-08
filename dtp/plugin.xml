@@ -9,6 +9,9 @@
 <resource resource="dashboards/Demandware Site Metrics.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
+<resource resource="dashboards/Demandware Web Page Performance.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>
 <resource resource="dashboards/Demandware Third Party Performance.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
