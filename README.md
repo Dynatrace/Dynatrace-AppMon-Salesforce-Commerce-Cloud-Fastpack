@@ -12,7 +12,7 @@ Dynatrace for Demandware is only for UEM via [CORS](https://en.wikipedia.org/wik
 
 - Username Tag
 
-For the Username Tag, this fastpack leverages the CSS Selector [class='user-account']@title, which is stored in a Page Action Metadata measure called Username.  The following Transformation regular expression is run on the result:
+For the Username Tag, this fastpack leverages the CSS Selector ```[class='user-account']@title```, which is stored in a Page Action Metadata measure called Username.  The following Transformation regular expression is run on the result:
 
 ```
 User: (?!Login \/  Register$)(.*)
