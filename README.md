@@ -1,4 +1,4 @@
-# Dynatrace-IBM-WebSphere-Commerce-Fastpack
+# Dynatrace Demandware Fastpack
 
 
 ![images_community/download/attachments/215745785/icon.png](/images_community/download/attachments/215745785/icon.png)
