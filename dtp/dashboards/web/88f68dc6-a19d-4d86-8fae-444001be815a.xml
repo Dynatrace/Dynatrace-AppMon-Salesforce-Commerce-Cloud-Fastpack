@@ -4,6 +4,6 @@
 <!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
 <dynatrace version="6.5.8.1013">
   <webuidashboard memento.version="6.5.8.1013">
-    <metadata owner="admin" name="Salesforce Commerce Third Party Performance Analysis" id="27513573-97d8-4680-81c3-be20ae3cf59e" modificationdate="1486162914295" sharemode="PUBLIC_SHARED" version="24" revision="dd3c958d-ca38-4de9-94cb-82999a9fd291" />
+    <metadata owner="admin" name="Salesforce Commerce Cloud - Real User &amp; Synthetic Insights" id="88f68dc6-a19d-4d86-8fae-444001be815a" modificationdate="1486157296440" sharemode="PUBLIC_SHARED" version="24" revision="9fc28244-f341-4fa5-a253-ba8ae86ff0ff" />
   </webuidashboard>
 </dynatrace>

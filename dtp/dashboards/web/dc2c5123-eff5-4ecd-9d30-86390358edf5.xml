@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
-<!-- Manual changes can cause severe problems and system instability -->
-<!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
-<dynatrace version="6.3.0.1305">
-  <webuidashboard memento.version="6.3.0.1305">
-    <metadata owner="admin" shared="true" name="Demandware Visit Metrics" id="dc2c5123-eff5-4ecd-9d30-86390358edf5" modificationdate="1456956458932" version="16" revision="55df6209-41c2-4b6e-9a75-7e7b4a2016c7" />
-  </webuidashboard>
-</dynatrace>

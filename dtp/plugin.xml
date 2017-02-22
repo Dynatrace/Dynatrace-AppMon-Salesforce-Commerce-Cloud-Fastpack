@@ -2,26 +2,35 @@
 <?eclipse version="3.4"?><plugin>
    <extension-point id="com.dynatrace.diagnostics.InstallerContent" name="com.dynatrace.diagnostics.InstallerContent" schema="schema/com.dynatrace.diagnostics.InstallerContent.exsd"/>
    <extension point="com.dynatrace.diagnostics.InstallerContent">
-      <metainfo installer_type="resourcepack" name="FastPack Resources">
-<resource resource="dashboards/Demandware Business Dashboard.dashboard.xml" resource_type="dashboard">
+      <metainfo installer_type="resourcepack" name="FastPack Resources">     
+<resource resource="dashboards/Salesforce Commerce Business Dashboard.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/Demandware Site Metrics.dashboard.xml" resource_type="dashboard">
+<resource resource="dashboards/Salesforce Commerce Cloud Visits.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/Demandware Web Page Performance.dashboard.xml" resource_type="dashboard">
+<resource resource="dashboards/Salesforce Commerce QA Performance.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/Demandware Third Party Performance.dashboard.xml" resource_type="dashboard">
+<resource resource="dashboards/Salesforce Commerce Third Party Performance.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/Demandware UEM Key Metrics Dashboard.dashboard.xml" resource_type="dashboard">
+<resource resource="dashboards/Salesforce Commerce UEM Key Metrics Dashboard.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/Demandware Visit Metrics.dashboard.xml" resource_type="dashboard">
+<resource resource="dashboards/Salesforce Commerce Web Page Performance.dashboard.xml" resource_type="dashboard">
+	            	<instance instance="server"/>
+	         	</resource>         	
+<resource resource="dashboards/web/88f68dc6-a19d-4d86-8fae-444001be815a.json" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/Demandware Visits.dashboard.xml" resource_type="dashboard">
+<resource resource="dashboards/web/88f68dc6-a19d-4d86-8fae-444001be815a.xml" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/689428dd-3753-407b-9583-396ca69b0a6c.json" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/689428dd-3753-407b-9583-396ca69b0a6c.xml" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
 <resource resource="dashboards/web/27513573-97d8-4680-81c3-be20ae3cf59e.json" resource_type="resource" target_dir="conf/dashboards/web">
@@ -30,13 +39,13 @@
 <resource resource="dashboards/web/27513573-97d8-4680-81c3-be20ae3cf59e.xml" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/web/dc2c5123-eff5-4ecd-9d30-86390358edf5.json" resource_type="resource" target_dir="conf/dashboards/web">
+<resource resource="dashboards/web/ef81fe32-3c29-4d59-afc7-99aa1514f818.json" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/web/dc2c5123-eff5-4ecd-9d30-86390358edf5.xml" resource_type="resource" target_dir="conf/dashboards/web">
+<resource resource="dashboards/web/ef81fe32-3c29-4d59-afc7-99aa1514f818.xml" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
-	         	</resource>
-<resource resource="profiles/Demandware.profile.xml" resource_type="systemProfile">
+	         	</resource>       	
+<resource resource="profiles/SalesforceCommerceCloud.profile.xml" resource_type="systemProfile">
 		            <instance instance="server"/>
 		        </resource>
 </metainfo>

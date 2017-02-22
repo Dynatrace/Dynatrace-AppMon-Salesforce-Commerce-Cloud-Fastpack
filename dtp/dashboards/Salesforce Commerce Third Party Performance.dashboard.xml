@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
+<dynatrace version="6.5.8.1013" date="2/3/17 4:20 PM">
+  <dashboardconfig memento.version="6.5.8.1013" suppresssavewarning="false" created="2017-02-03T16:20:21-0700" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://SelectYourServer" sessionid="SalesforceCommerceCloud" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="0000015a-0647-4f08-9b76-0751d9d3f259" locationassource="false" localizationenabled="true" name="Salesforce Commerce Third Party Performance" authorname="dmabxw0" modified="2017-02-03T16:20:21-0700" id="bbdffe52-93db-45cb-a5dd-f27673e0946c">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications" />
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion type="dbdetails" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion includemeasurename="true" includeplatform="true" includetestname="true" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,MISSING,passed" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API,EXTERNAL" />
+      <criterion includeplatform="true" type="testsoverview" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe type="Last 24h" />
+      </criterion>
+      <criterion useendtimefortimeframefilter="false" type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="15" enabled="true" />
+    <designconfig autoscroll="false" namefontsize="10" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="303c203a-3ba6-4ed2-8f81-183cb5806a0d" folderid="org.eclipse.ui.internal.ViewStack@754c01" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@18a85f6" relatedfolderid="org.eclipse.ui.internal.ViewStack@754c01" ratio="0.2439282" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="folder" relatedfolderid="org.eclipse.ui.internal.ViewStack@18a85f6" ratio="0.09217877" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@ec6bb3" relatedfolderid="folder" ratio="0.5902062" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@c5fcee" relatedfolderid="org.eclipse.ui.internal.ViewStack@ec6bb3" ratio="0.4944134" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@5a1700" relatedfolderid="org.eclipse.ui.internal.ViewStack@c5fcee" ratio="0.2932961" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="92f72501-9601-42fa-9d97-db85ed628596" folderid="org.eclipse.ui.internal.ViewStack@283d475d" relatedfolderid="folder" ratio="0.39944133">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,0,0" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="b97153e3-2ce2-474d-bc8b-677d2ffe61a3" folderid="org.eclipse.ui.internal.ViewStack@1206308b" relatedfolderid="org.eclipse.ui.internal.ViewStack@283d475d" ratio="0.49806702">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="742e9fc6-9068-4ee3-adf5-0ca09d8aaa46" folderid="org.eclipse.ui.internal.ViewStack@23fc1fb4" relatedfolderid="org.eclipse.ui.internal.ViewStack@1206308b" ratio="0.49807444">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="4740175d-aff9-49d8-bd17-80a4ac891194" folderid="org.eclipse.ui.internal.ViewStack@73776e29" relatedfolderid="org.eclipse.ui.internal.ViewStack@283d475d" ratio="0.4980595">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,0,0" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="ab9514d8-af92-44da-a8b1-7ed281a9cdd0" folderid="org.eclipse.ui.internal.ViewStack@4ede615c" relatedfolderid="folder" ratio="0.4965035">
+        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" namefontcolor="0,0,0" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@16efb343" relatedfolderid="org.eclipse.ui.internal.ViewStack@754c01" ratio="0.25579897" />
+    </dashboardlayout>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="Shows the correlation of Third Party times on the time required for loading the initial document as well as the overall page. The right axis displays the User Action trend." locationascomparesource="false" source="server://bw-dyna-63" sessionid="SalesforceCommerceCloud" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@283d475d" rightaxistimeframeoffsetunit="MILLISECONDS" locationassource="false" addfilterinfo="false" rightaxistimeframeoffset="0" name="Impact of Third Party on Load Time compared to the User Action Trend" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.DualAxisChart" id="92f72501-9601-42fa-9d97-db85ed628596">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="5" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 24h" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig axisboundsmode="AUTO" rightaxisdatascale="1.0" leftaxisdatascale="1.0" axisdrawingorder="RIGHT">
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="LineChart" aggregation.absolute="false" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="Load Time" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition agent="true" measure="true" host="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(242,134,10,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="d9deeee8-4223-4722-908d-cc0b7df6e6fe" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="s" name="Load Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="s">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Load Time" agentname="" metricsimpledisplayname="Total Time" agenthost="" metrickeyid="Total Time" keyid="Load Time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,64,128,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5327624a-14d9-44b5-a7db-6e8d837e314d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="s" name="Third party content load time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="s">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Third party content load time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Third party content load time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(11,23,76,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5b458639-2510-4f5e-ad80-c9538e701330" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="s" name="Document load time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="s">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Document load time" agentname="" metricsimpledisplayname="DOM Load Time" agenthost="" metrickeyid="DOM Load Time" keyid="Document load time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <chart axis.x.title="" axis.y.title.show="true" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="ClusteredBarChart" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="true" axis.y.title="User Action Count" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition agent="true" measure="true" host="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,153,153,127)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="random" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="c659239b-e6f4-4084-878a-1e696aff0017" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="false" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="number" name="User Action Count" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="number">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Action Count" agentname="" metricsimpledisplayname="Count" agenthost="" metrickeyid="Count" keyid="Page Action Count" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="true" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <ccontent enabled="first" ratio="0.5" />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://bw-dyna-63" sessionid="SalesforceCommerceCloud" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@4ede615c" locationassource="false" addfilterinfo="false" name="Third Party" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.BtHistoricalCompare" id="ab9514d8-af92-44da-a8b1-7ed281a9cdd0" treestructuremode="Hierarchy">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="20" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 1h" />
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="timeframe" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="15" enabled="true" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <datamodelconfig sortcolumn="0" columnorder="12,1,2,3,4,5,6,7,8,0,9,11,10,13,14" sorttable="0" sortorder="Up">
+        <chartsourceconfigurations>
+          <chartsource systemid="SalesforceCommerceCloud" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SalesforceCommerceCloud" autoscale="false" name="" overridesource="false" sourcetype="BUSINESS_TRANSACTION" id="afcf2e21-e91d-4897-b2cf-96a81725758c" position="1" displayrate="10s">
+            <businesstransaction groupingconstant1="BTSP1" transactionconfigkeyid="Page Actions by Third Party Hotspot" parentconfigurationid="40a2ce15-cb74-430d-b401-a1fc9a87ab3b">
+              <sessionreference systemid="SalesforceCommerceCloud" datastarttime="1484774718369" techtypes="19" latestmodification="1484780755640" lastmodifiedby="admin" type="live" />
+              <childsourceconfigs>
+                <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="c159980b-9f9e-47de-ae58-de88db27f505" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="number">
+                  <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="parent" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="a4de9697-d370-4bbf-a84c-1f0cae0eed76" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="number">
+                  <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="parent" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="fd2b1153-ea7b-4f92-9adc-67e9fcedce3f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="number">
+                  <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="466abaea-0c4a-41b8-a1bb-b04e78a590fe" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+                  <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="parent" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="50b17db8-1850-4ecd-9b12-ed00ae297dc6" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+                  <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+                  <displaysourceinfo />
+                </chartsource>
+                <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" colorinheritancemode="parent" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="d8f6cc2f-4377-4e03-8f92-64098502e7c0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+                  <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+                  <displaysourceinfo />
+                </chartsource>
+              </childsourceconfigs>
+            </businesstransaction>
+          </chartsource>
+        </chartsourceconfigurations>
+        <columndescriptor special="true" displayname="Count" name="Count" id="count">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number of times this Business Transaction occurred" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Count per day" name="Count per day" id="countPerDay">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number of times this Business Transaction occurred per day" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Incidents" name="Incidents" id="incidents">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number of Business Transactions which triggered incidents" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Incidents per day" name="Incidents per day" id="incidentsPerDay">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number Business Transactions which triggered incidents, normalized to a one-day period" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Incident rate [%]" name="Incident rate [%]" id="incidentRate">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number of Business Transactions which triggered incidents, in relation to the number of times this Business Transaction occurred" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Violations" name="Violations" id="violations">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Violations per day" name="Violations per day" id="violationsPerDay">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction per day" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Violations per Business Transaction [%]" name="Violations per Business Transaction [%]" id="violationRate">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="true" width="65" tooltip="The number of violations of result measures of this Business Transaction, in relation to the number of times this Business Transaction occurred" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="" name="" id="state">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="false" width="20" tooltip="The state (ok, error) that has been detected for this Business Transaction" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="true" displayname="Failed %" name="Failed %" id="errorPercentage">
+          <aggregationtype aggregationtypeid="Max" />
+          <column forcevisible="false" hidden="false" width="65" tooltip="The percentage of errors that has been detected for this Business Transaction" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="false" displayname="User Action Count" name="Page Action Count">
+          <aggregationtype aggregationtypeid="Avg" />
+          <column forcevisible="false" hidden="true" width="120" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="false" displayname="User Action Count" name="Page Action Count">
+          <aggregationtype aggregationtypeid="Sum" />
+          <column forcevisible="true" hidden="false" width="104" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="false" displayname="User Action Response Time" name="Page Action Response Time">
+          <aggregationtype aggregationtypeid="Avg" />
+          <column forcevisible="false" hidden="false" width="173" index="-1" sort="None" />
+        </columndescriptor>
+        <columndescriptor special="false" displayname="User Action Response Time" name="Page Action Response Time">
+          <aggregationtype aggregationtypeid="Sum" />
+          <column forcevisible="false" hidden="true" width="65" index="-1" sort="None" />
+        </columndescriptor>
+        <aggregationtype aggregationtypeid="Avg" />
+        <aggregationtype aggregationtypeid="Sum" />
+        <expandednodes>
+          <expandednode expandednode="Page Actions by Third Party Hotspot (split by Third party hotspot)" />
+        </expandednodes>
+      </datamodelconfig>
+      <descriptors>
+        <timeframetabledescriptor enabled="true">
+          <timeframe type="Last 24h" />
+        </timeframetabledescriptor>
+        <timeframetabledescriptor enabled="true">
+          <timeframe unit="HOURS" offset="24" timeshift="1" timeshiftunit="DAYS" type="Offset Custom" />
+        </timeframetabledescriptor>
+        <timeframetabledescriptor enabled="true">
+          <timeframe unit="HOURS" offset="24" timeshift="7" timeshiftunit="DAYS" type="Offset Custom" />
+        </timeframetabledescriptor>
+      </descriptors>
+      <ccontent enabled="both" ratio="0.187" />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://bw-dyna-63" sessionid="SalesforceCommerceCloud" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1206308b" locationassource="false" addfilterinfo="false" name="Load Time of Actions Calling Third Party" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="b97153e3-2ce2-474d-bc8b-677d2ffe61a3">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 24h" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" maxdisplayitems="10" zoomable="true" charttype="LineChart" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,64,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="aa35e95f-00c2-4238-909d-485276259746" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(90,196,82,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="aa35e95f-00c2-4238-909d-485276259746" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b485fe44-8991-3f5d-b37d-d5f7ba7e973f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Google APIS" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(186,42,32,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="aa35e95f-00c2-4238-909d-485276259746" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b830613f-2a00-3322-8d1b-2984d8795a74" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="CDN" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(242,134,10,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="aa35e95f-00c2-4238-909d-485276259746" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="003d48b7-bf70-335e-b842-5d1e1c0a96a0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="cquotient.com" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(177,78,207,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="aa35e95f-00c2-4238-909d-485276259746" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="1ebca5e9-7aa8-3c21-9a6b-c46f882a649b" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="bootstrapcdn.com" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(74,103,232,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="aa35e95f-00c2-4238-909d-485276259746" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="2ac508de-086f-3ae0-ab38-74c570b4d82c" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Page Actions by Third Party Hotspot - User Action Response Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="gstatic.com" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="UseBackgroundImageHeight" locationascomparesource="false" source="server://bw-dyna-63" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="This dashboard gives you a performance overview of every Third Party. Select a Third Party, analyze response time and activity in the charts&#xA; and identify root cause of performance and scalability problems in the diagnostics charts." folderid="org.eclipse.ui.internal.ViewStack@754c01" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Third Party Performance Analysis" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="303c203a-3ba6-4ed2-8f81-183cb5806a0d">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="19" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="" style="NORMAL" height="12" />
+      <image offset="-1" length="13416">
+        <chunk offset="0" data="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" />
+      </image>
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://bw-dyna-63" sessionid="SalesforceCommerceCloud" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@73776e29" locationassource="false" addfilterinfo="false" name="Third Party Busy Time" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="4740175d-aff9-49d8-bd17-80a4ac891194">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="14" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 24h" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="LineChart" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="8828b580-c8d9-448a-bed2-f9d5d24a7d0e" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="YUI APIs busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="18" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="YUI APIs busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="YUI APIs busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(90,196,82,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="22789256-1543-4f43-91a1-23c2a6d560c8" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="9b102770-58a9-3646-93ea-ab231fe9eb5f" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Google APIs busy time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="Default Application" parentkeyid="Google APIs busy time" agentname="-" metricsimpledisplayname="Third party content load time" agenthost="-" metrickeyid="Third party content load time" keyid="Google APIs busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="9d364fe0-a933-46eb-b0ba-f32904d3271e" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Google Ad busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="11" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Google Ad busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Google Ad busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b0a5fa52-8f21-4cff-aee3-f7166beb98aa" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Amazon Cloud Front busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="4" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Amazon Cloud Front busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Amazon Cloud Front busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="b9628cc8-4ecb-4bea-97d6-781f6cbcfb97" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Facebook busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="9" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Facebook busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Facebook busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(177,78,207,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="bbe52175-2f14-458d-bf00-5de872de2fb4" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Bootstrapcdn.com Busy Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="21" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Bootstrapcdn.com Busy Time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Bootstrapcdn.com Busy Time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="c34723c9-fcf0-4769-8769-1e5bfaa0d432" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Advertising.com busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Advertising.com busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Advertising.com busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(242,134,10,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="caf09ed6-7d7d-4937-b010-8f690ac2c6c0" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="CQuotient Busy Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="20" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="CQuotient Busy Time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="CQuotient Busy Time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(177,78,207,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="bbe52175-2f14-458d-bf00-5de872de2fb4" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="d2781984-902c-3521-9262-33a4486a0e3a" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Bootstrapcdn.com Busy Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="Default Application" parentkeyid="Bootstrapcdn.com Busy Time" agentname="-" metricsimpledisplayname="Third party content load time" agenthost="-" metrickeyid="Third party content load time" keyid="Bootstrapcdn.com Busy Time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="e15a5be4-7839-4fc2-9eb7-49aff423d878" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Google Plus busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="13" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Google Plus busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Google Plus busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="e35dc758-65b4-4744-90d1-2910cfbef943" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Third party content load time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="6" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Third party content load time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Third party content load time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="e41b06f2-0d6f-463c-8059-579226686f49" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Amazon S3 busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="5" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Amazon S3 busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Amazon S3 busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(242,134,10,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="caf09ed6-7d7d-4937-b010-8f690ac2c6c0" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="e94fa0a4-9296-3575-8be3-d705ded9d61e" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="CQuotient Busy Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="Default Application" parentkeyid="CQuotient Busy Time" agentname="-" metricsimpledisplayname="Third party content load time" agenthost="-" metrickeyid="Third party content load time" keyid="CQuotient Busy Time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="ee863b6c-3c77-4b6e-b8b9-453bc0ad8fd3" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Yieldmanager Ads busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="17" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Yieldmanager Ads busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Yieldmanager Ads busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="0f1169bc-fcfc-4f83-b8aa-18505bff481d" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Doubleclick busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="10" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Doubleclick busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Doubleclick busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(90,196,82,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="22789256-1543-4f43-91a1-23c2a6d560c8" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Google APIs busy time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="12" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Google APIs busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Google APIs busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="25e7c262-2880-4bd6-bc85-517ecea098ec" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Twitter busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="16" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Twitter busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Twitter busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(178,134,26,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="e35dc758-65b4-4744-90d1-2910cfbef943" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="26c17d9b-61d1-3c1a-89bd-b791019144e2" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Third party content load time" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="Default Application" parentkeyid="Third party content load time" agentname="-" metricsimpledisplayname="Third party content load time" agenthost="-" metrickeyid="Third party content load time" keyid="Third party content load time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(74,103,232,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="7dac1af4-04d1-4b4d-9939-2e6dc3a9eeb5" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="3abfcc84-f022-345b-8d02-45bb1afafa41" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="GStatic Busy Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="Default Application" parentkeyid="GStatic Busy Time" agentname="-" metricsimpledisplayname="Third party content load time" agenthost="-" metrickeyid="Third party content load time" keyid="GStatic Busy Time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="3c4fc352-35b6-4ba6-bcee-dd55c6f60d77" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Metrics busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="15" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Metrics busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Metrics busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="3f2eeadb-1b4f-4a20-ab00-22498d1bcf8f" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="AdTech busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="AdTech busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="AdTech busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="4aebffb3-0ba0-494f-a976-436712deeff1" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Akamai busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Akamai busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Akamai busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5a0663a9-6cfa-404d-866f-f9b2a6121c31" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="CDN busy time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="8" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="CDN busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="CDN busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5cf26b20-77b0-4ebc-afe2-30adbef796d9" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="LinkedIn busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="14" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="LinkedIn busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="LinkedIn busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(186,42,32,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="5a0663a9-6cfa-404d-866f-f9b2a6121c31" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="6f9c82ca-2e1d-3129-b560-5155359dd7b2" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="CDN busy time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="Default Application" parentkeyid="CDN busy time" agentname="-" metricsimpledisplayname="Third party content load time" agenthost="-" metrickeyid="Third party content load time" keyid="CDN busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="70f09550-1236-4662-8986-cf1b895c03c8" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="Amazon Web Services busy time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="7" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Amazon Web Services busy time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="Amazon Web Services busy time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="Application" colorinheritancemode="parent" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="7dac1af4-04d1-4b4d-9939-2e6dc3a9eeb5" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="EndUserPageActionMeasure" fetchbaseline="false" unit="ms" name="GStatic Busy Time" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="19" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="GStatic Busy Time" agentname="" metricsimpledisplayname="Third party content load time" agenthost="" metrickeyid="Third party content load time" keyid="GStatic Busy Time" metricgroupkey="Page Actions" collector="" measuretype="EndUserPageActionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://bw-dyna-63" sessionid="SalesforceCommerceCloud" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@23fc1fb4" locationassource="false" addfilterinfo="false" name="Slow Third Party Activity (Count)" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="742e9fc6-9068-4ee3-adf5-0ca09d8aaa46">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 24h" />
+        </criterion>
+        <criterion useendtimefortimeframefilter="false" type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" maxsplitcharts="10" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="StackedBarChart" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(90,196,82,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="2236eb7b-acba-43a2-8422-06b0c9a1f888" groupingcriterion="BTSP1" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="923de470-0c93-37de-88f2-8d31bdafe9e9" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Google APIS" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(242,134,10,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="2236eb7b-acba-43a2-8422-06b0c9a1f888" groupingcriterion="BTSP1" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="a1dba1bf-405b-3caa-8ca8-59797f1f3760" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="cquotient.com" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(186,42,32,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="2236eb7b-acba-43a2-8422-06b0c9a1f888" groupingcriterion="BTSP1" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="acfee4d7-2791-3d0f-aeff-aa84ae3e4b52" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="CDN" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(74,103,232,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="2236eb7b-acba-43a2-8422-06b0c9a1f888" groupingcriterion="BTSP1" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="f8e790f5-0cfd-313a-81b1-b622b743eb11" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="gstatic.com" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,128,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="2236eb7b-acba-43a2-8422-06b0c9a1f888" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="number" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(177,78,207,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="2236eb7b-acba-43a2-8422-06b0c9a1f888" groupingcriterion="BTSP1" aggregationtype="Sum" rate="10s" sourcetype="MEASURE" id="5778cf4f-5693-391d-9a9b-4674cafe6334" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="number" name="Page Actions by Third Party Hotspot - User Action Count" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="number">
+            <tagtolabel>
+              <taglabelentry value="Third party hotspot" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Page Actions by Third Party Hotspot (Page Action Count;Page Actions;Count)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="bootstrapcdn.com" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="number" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Page Actions by Third Party Hotspot" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
