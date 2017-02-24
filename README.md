@@ -10,9 +10,7 @@ The Dynatrace FastPack for Salesforce Commerce Cloud provides a preconfigured Dy
 ## Customizations:
 Dynatrace for Salesforce Commerce Cloud is only for UEM via [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) as java agents are not allowed on the Salesforce Commerce JVMs. As a result, some of the custom measures and business transactions in the fastpack are dependent User Action names and CSS Selectors specific to the Salesforce Commerce supplied SiteGenesis store. Because the web frontend of a Salesforce Commerce store can be customized, there's no guarantee the foundation of the measures will exist in your store.  However, these can easily be replaced.
 
-### Customization #1:
-
-- Username Tag
+### Customization #1: Username Tag
 
 For the Username Tag, this fastpack leverages the CSS Selector ```[class='user-account']@title```, which is stored in a Page Action Metadata measure called Username.  The following Transformation regular expression is run on the result:
 
@@ -30,9 +28,7 @@ In the case of SiteGenesis, when a User is not logged in, the value is filled in
 
 To learn more about metadata measures, please refer to [Dynatrace documentation](https://community.dynatrace.com/community/display/DOCDT63/System+Profile+-+User+Experience#SystemProfile-UserExperience-WebSettings).
 
-### Customization #2: 
-
-- Conversion Goal
+### Customization #2: Conversion Goal
 
 The Conversion Goal is a Page/User action used to identify when a user completes an order. Using a conversion goal has many benefits to understanding the conditions under which a user did or did not complete a purchase. While there is only one CSS Selector used, two measures exist as the syntax captured by web vs. mobile web is very different. As with the example in the fastpack, you may find there's a different conversion target for mobile vs. desktop web. You can add multiple conversion goals.
 
@@ -47,8 +43,7 @@ You can change your conversion goal by substituting any other measure you create
 #### Conversion Goal Measure
 ![Conversion Goal Measure](/images_community/download/attachments/215745785/OrderConfirmationMeasures.png)
 
-### Customization #3:
-- Orders and Revenue
+### Customization #3: Orders and Revenue
 In order to track orders and revenue from orders over time, a User Action business transaction called Orders was created. This is slightly different than standard conversions as a conversion is visit based. If a user makes multiple orders in a single visit, that counts as 1 conversion. However, since I've personally made several orders on commerce sites in a single visit, I thought it would be best to track orders and revenue by the occurence based on User Actions. This way, if multiple orders are made in a single visit, each order and revenue value will be tracked. This Business transaction looks for every occurence of a user landing on the OrderConfirmationPage and tracks the number of occurences and PurchaseValue. These can additionally be split by client type/family, country, User Experience Index of Visit, Operating System or Application
 
 The Business Transaction is reliant on eight measures, two of which you will have to customize to your environment:
@@ -111,9 +106,7 @@ The PurchaseValue measure is simply a JavaScript ADK Value (User Actions) measur
 ![PurchaseValue Measure](/images_community/download/attachments/215745785/PurchaseValue.png)
 
 
-### Customization #4:
-
-- Abandoned Cart
+### Customization #4: Abandoned Cart
  
 The Abandoned Cart measure counts the number of Visits where users added at least one item to their cart but did not purchase. Along with counting how many abandoned carts there are in a given time period, the business transaction also tracks which pages customers are abandoning on, the response time of the exit page, the monetary value of the abandoned cart, the Client Type and Family of the Visits as well as the User Experience Reason of the visit.
  
