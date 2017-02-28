@@ -173,7 +173,7 @@ The miniCartValue measure is simply a JavaScript ADK Value (User Actions) measur
 ![miniCartValue Measure](/images_community/download/attachments/215745785/AbandonedCartValue.png)
 
 
-Find further information in the [dynaTrace community](https://community.dynatrace.com/community/display/DL/Demandware+FastPack). 
+Find further information in the [dynaTrace community](https://community.dynatrace.com/community/display/DL/Salesforce+Commerce+Cloud+%28formerly+Demandware%29+FastPack). 
 
 
 
