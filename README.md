@@ -1,14 +1,14 @@
-# Dynatrace Salesforce Commerce Cloud (formerly Demandware) Fastpack for AppMon 6.5
+# Dynatrace AppMon Salesforce Commerce Cloud (formerly Demandware) Fastpack for AppMon 7.0
 
 
 ![images_community/download/attachments/215745785/icon.png](/images_community/download/attachments/215745785/icon.png)
 
-This fastpack is for use with Dynatrace Application Monitor Version 6.5. Branch v1.0_AppMon_6.3 is for AppMon 6.3
+This fastpack is for use with Dynatrace Application Monitor Version 7.0.  Branch [v2.0_AppMon_6.5](https://github.com/Dynatrace/Dynatrace-Salesforce-Commerce-Cloud-Fastpack/tree/v2.0_AppMon_6.5) is for AppMon 6.5 and Branch [v1.0_AppMon_6.3](https://github.com/Dynatrace/Dynatrace-Salesforce-Commerce-Cloud-Fastpack/tree/v1.0_AppMon_6.3) is for AppMon 6.3
 
-The Dynatrace FastPack for Salesforce Commerce Cloud provides a preconfigured Dynatrace profile custom tailored to Salesforce Commerce environments. This FastPack contains sensors, a template system profile with measures and business transactions, and dashboards for the Salesforce Commerce platform. Because the Salesforce Commerce integration with UEM leverages CORS, there are a few measures that will likely have to be customized to your environment. 
+The Dynatrace AppMon FastPack for Salesforce Commerce Cloud provides a preconfigured Dynatrace AppMon profile custom tailored to Salesforce Commerce environments. This FastPack contains sensors, a template system profile with measures and business transactions, and dashboards for the Salesforce Commerce platform. Because the Salesforce Commerce integration with UEM leverages CORS, there are a few measures that will likely have to be customized to your environment. 
 
 ## Customizations:
-Dynatrace for Salesforce Commerce Cloud is only for UEM via [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) as java agents are not allowed on the Salesforce Commerce JVMs. As a result, some of the custom measures and business transactions in the fastpack are dependent User Action names and CSS Selectors specific to the Salesforce Commerce supplied SiteGenesis store. Because the web frontend of a Salesforce Commerce store can be customized, there's no guarantee the foundation of the measures will exist in your store.  However, these can easily be replaced.
+Dynatrace AppMon for Salesforce Commerce Cloud is only for UEM via [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) as java agents are not allowed on the Salesforce Commerce JVMs. As a result, some of the custom measures and business transactions in the fastpack are dependent User Action names and CSS Selectors specific to the Salesforce Commerce supplied SiteGenesis store. Because the web frontend of a Salesforce Commerce store can be customized, there's no guarantee the foundation of the measures will exist in your store.  However, these can easily be replaced.
 
 ### Customization #1: Username Tag
 

@@ -2,8 +2,8 @@
 <!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
 <!-- Manual changes can cause severe problems and system instability -->
 <!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
-<dynatrace version="6.5.8.1013" date="2/3/17 4:20 PM">
-  <dashboardconfig memento.version="6.5.8.1013" suppresssavewarning="false" created="2017-02-03T16:20:53-0700" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://SelectYourServer" sessionid="SalesforceCommerceCloud" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="0000015a-0647-cc08-8767-16707c4d6d8d" locationassource="false" localizationenabled="true" name="Salesforce Commerce Web Page Performance" authorname="dmabxw0" modified="2017-02-03T16:20:53-0700" id="197df7fb-b510-4892-81c4-56832a754e51">
+<dynatrace version="7.0.0.2449" date="5/30/17 2:41 PM">
+  <dashboardconfig memento.version="7.0.0.2449" suppresssavewarning="false" created="2017-05-30T14:41:54-0600" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://SelectYourServer" sessionid="SalesforceCommerceCloud" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="0000015c-5b17-fdf0-9895-93d584fe1c0d" locationassource="false" localizationenabled="true" name="Salesforce Commerce Web Page Performance" authorname="dmabxw0" modified="2017-05-30T14:41:58-0600" id="4fb90356-06c9-4b6e-96dd-d699a507c274">
     <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
     <filter>
       <criterion type="admfilteranalyzer" />
@@ -13,14 +13,14 @@
       </criterion>
       <criterion type="and" />
       <criterion mode="all" excludeexternalsubpaths="false" type="api" />
-      <criterion mode="all" type="applications" />
+      <criterion mode="ALL" patternstring="" type="applications" matchmode="contains" />
       <criterion type="btm" />
       <criterion type="casuemdimension" />
       <criterion type="dbdetails" />
       <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
       <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
       <criterion mode="all" type="hosts" completepurepath="true" />
-      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion severitiesmode="all" statesmode="all" matchpattern="" assignees="" type="incident" matchstring="contains" rulesmode="ALL" severities="" states="" />
       <criterion type="or" />
       <criterion mode="all" enduser="false" type="purepaths" />
       <criterion includemeasurename="true" includeplatform="true" includetestname="true" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,MISSING,passed" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API,EXTERNAL" />
@@ -46,25 +46,25 @@
       </criterion>
     </filter>
     <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
-    <designconfig autoscroll="false" namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <designconfig autoscroll="false" namefontsize="10" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
     <dashboardlayout>
       <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="05c44096-f155-47b9-986d-924aded87063" folderid="org.eclipse.ui.internal.ViewStack@754c01" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
-        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" namefontcolor="72,72,72" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+        <designconfig namefontsize="16" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="CUSTOM" namefontcolor="72,72,72" nameshow="true" descriptionfontstyle="BOLD" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
-      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@18a85f6" relatedfolderid="org.eclipse.ui.internal.ViewStack@754c01" ratio="0.24604012" />
-      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="bf15f49c-c2e3-466f-889c-a349ffed4c47" folderid="folder" relatedfolderid="org.eclipse.ui.internal.ViewStack@18a85f6" ratio="0.09663866">
-        <designconfig namefontsize="16" descriptionshow="true" headertype="CUSTOM" namefontcolor="87,87,87" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@18a85f6" relatedfolderid="org.eclipse.ui.internal.ViewStack@754c01" ratio="0.24602333" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="bf15f49c-c2e3-466f-889c-a349ffed4c47" folderid="folder" relatedfolderid="org.eclipse.ui.internal.ViewStack@18a85f6" ratio="0.095639944">
+        <designconfig namefontsize="16" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="CUSTOM" namefontcolor="87,87,87" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
-      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" relatedfolderid="folder" ratio="0.38235295" />
-      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@ec6bb3" relatedfolderid="folder" ratio="0.67328805" />
-      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="4ffeef95-4c18-4e41-aa82-5be7e2f2092c" folderid="org.eclipse.ui.internal.ViewStack@c5fcee" relatedfolderid="org.eclipse.ui.internal.ViewStack@ec6bb3" ratio="0.5">
-        <designconfig namefontsize="10" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      <portletfolder selectionindex="-1" relationtype="BOTTOM" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@1dc84bc" relatedfolderid="folder" ratio="0.38115332" />
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="org.eclipse.ui.internal.ViewStack@ec6bb3" relatedfolderid="folder" ratio="0.67319846" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="4ffeef95-4c18-4e41-aa82-5be7e2f2092c" folderid="org.eclipse.ui.internal.ViewStack@c5fcee" relatedfolderid="org.eclipse.ui.internal.ViewStack@ec6bb3" ratio="0.49929675">
+        <designconfig namefontsize="10" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
-      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="8023a579-c406-477a-9897-d87760d3a18e" folderid="org.eclipse.ui.internal.ViewStack@5a1700" relatedfolderid="org.eclipse.ui.internal.ViewStack@c5fcee" ratio="0.29691878">
-        <designconfig namefontsize="10" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="8023a579-c406-477a-9897-d87760d3a18e" folderid="org.eclipse.ui.internal.ViewStack@5a1700" relatedfolderid="org.eclipse.ui.internal.ViewStack@c5fcee" ratio="0.29676512">
+        <designconfig namefontsize="10" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
-      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="8acc52f0-eebe-4d85-bf77-d2dd818837da" folderid="org.eclipse.ui.internal.ViewStack@b57d69" relatedfolderid="org.eclipse.ui.internal.ViewStack@5a1700" ratio="0.49203187">
-        <designconfig namefontsize="10" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="8acc52f0-eebe-4d85-bf77-d2dd818837da" folderid="org.eclipse.ui.internal.ViewStack@b57d69" relatedfolderid="org.eclipse.ui.internal.ViewStack@5a1700" ratio="0.492">
+        <designconfig namefontsize="10" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
     </dashboardlayout>
     <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" locationascomparesource="false" source="server://bw-dyna-63" sessionid="SalesforceCommerceCloud" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@5a1700" locationassource="false" addfilterinfo="false" name="W3C Navigation Landmarks" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="8023a579-c406-477a-9897-d87760d3a18e">
@@ -74,8 +74,14 @@
           <textpattern name="agentname" type="contains" enabled="true" />
           <textpattern name="agenthost" type="contains" enabled="true" />
         </criterion>
-        <criterion mode="all" type="applications" />
-        <criterion type="btm" />
+        <criterion mode="SELECTED_APPLICATIONS" patternstring="" type="applications" matchmode="contains">
+          <applicationmetadata name="SiteGenesis" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="EndUser" configuredforfullsplit="true" transaction="Web Page Actions">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="Loading of Page /on/demandware.store/Sites-SiteGenesis-Site" />
+          </record>
+        </criterion>
         <criterion mode="all" type="hosts" completepurepath="true" />
         <criterion type="timeframe">
           <timeframe type="Last 15min" />
@@ -83,7 +89,10 @@
         <criterion useendtimefortimeframefilter="false" type="visits">
           <visitidset />
         </criterion>
-        <inheritancemap />
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
       </filter>
       <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
       <sashconfig displayoption="CHART" weights="500,500" />
@@ -92,14 +101,14 @@
           <legendcomposition measure="true">
             <pielabelcomposition unit="true" value="true" />
           </legendcomposition>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(192,192,192,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="d0d8694e-f30d-4960-a3fc-e4145df60aa5" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Document Interactive" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="2" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(192,192,192,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="d0d8694e-f30d-4960-a3fc-e4145df60aa5" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - DOM Interactive" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="2" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
             <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions (Document Interactive;Page Actions;Document Interactive)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions (Document Interactive;Page Actions;Document Interactive)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
             <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(64,0,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="59462197-6c8a-4137-923c-7df84129c13a" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Document Fetch Done" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(64,0,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="59462197-6c8a-4137-923c-7df84129c13a" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - HTML downloaded (Response end)" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
@@ -151,8 +160,14 @@
           <textpattern name="agentname" type="contains" enabled="true" />
           <textpattern name="agenthost" type="contains" enabled="true" />
         </criterion>
-        <criterion mode="all" type="applications" />
-        <criterion type="btm" />
+        <criterion mode="SELECTED_APPLICATIONS" patternstring="" type="applications" matchmode="contains">
+          <applicationmetadata name="SiteGenesis" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="EndUser" configuredforfullsplit="true" transaction="Web Page Actions">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="Loading of Page /on/demandware.store/Sites-SiteGenesis-Site" />
+          </record>
+        </criterion>
         <criterion mode="all" type="hosts" completepurepath="true" />
         <criterion type="timeframe">
           <timeframe type="Last 15min" />
@@ -160,7 +175,10 @@
         <criterion useendtimefortimeframefilter="false" type="visits">
           <visitidset />
         </criterion>
-        <inheritancemap />
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
       </filter>
       <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
       <sashconfig displayoption="CHART" weights="500,500" />
@@ -169,7 +187,7 @@
           <legendcomposition measure="true">
             <pielabelcomposition unit="true" value="true" />
           </legendcomposition>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(242,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="27eb0b7c-307a-4af3-8048-6f3e0cdd095e" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="9026ce3d-6700-3e20-ae44-b3f86560c295" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Document request" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(242,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" parentid="27eb0b7c-307a-4af3-8048-6f3e0cdd095e" groupingcriterion="BTSP1" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="9026ce3d-6700-3e20-ae44-b3f86560c295" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Request" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
@@ -178,7 +196,7 @@
             </lightweightuniquemeasureidentifier>
             <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="17f74b12-3afa-4af6-ad07-4a21da2eefd0" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Connect" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,128,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="17f74b12-3afa-4af6-ad07-4a21da2eefd0" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - TCP" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
@@ -192,14 +210,14 @@
             <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions (SSL;Page Actions;SSL)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions (SSL;Page Actions;SSL)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
             <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(64,128,128,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="27eb0b7c-307a-4af3-8048-6f3e0cdd095e" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Document request" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="3" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(64,128,128,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="27eb0b7c-307a-4af3-8048-6f3e0cdd095e" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Request" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="3" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
             <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions (Document request;Page Actions;Document request)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions (Document request;Page Actions;Document request)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
             <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5bc92bb9-5e23-4a5c-8c57-7749d617e93d" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Document response" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="4" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="5bc92bb9-5e23-4a5c-8c57-7749d617e93d" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Response" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="4" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
@@ -254,7 +272,7 @@
         <criterion mode="INACTIVE" type="analysiscache" />
         <criterion type="and" />
         <criterion mode="all" excludeexternalsubpaths="false" type="api" />
-        <criterion mode="all" type="applications" />
+        <criterion mode="ALL" patternstring="" type="applications" matchmode="contains" />
         <criterion type="btm" />
         <criterion type="casuemdimension" />
         <criterion type="dbdetails" />
@@ -460,7 +478,7 @@
         <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
       </chart>
     </portletconfig>
-    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" heightmode="UseBackgroundImageHeight" locationascomparesource="false" source="server://bw-dyna-63" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xA;This dashboard gives you a performance overview of every important web page. &#xA;Select a Web Page, analyze response time and load distribution in the charts and identify root&#xA;cause of performance and scalability problems in the diagnostics charts." folderid="org.eclipse.ui.internal.ViewStack@754c01" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Web Page Performance Analysis" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(51,51,51,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="05c44096-f155-47b9-986d-924aded87063">
+    <portletconfig usedashboardsourceforcompare="true" icon="com.dynatrace.diagnostics.sdk/default.gif" description="" source="server://bw-dyna-63" folderid="org.eclipse.ui.internal.ViewStack@754c01" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(51,51,51,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="05c44096-f155-47b9-986d-924aded87063" usespecificautorefresh="false" heightmode="UseBackgroundImageHeight" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xA;This dashboard gives you a performance overview of every important web page. &#xA;Select a Web Page, analyze response time and load distribution in the charts and identify root&#xA;cause of performance and scalability problems in the diagnostics charts." locationassource="false" offerthresholdcolors="false" name="Web Page Performance Analysis" thresholdcolors="true">
       <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="10" enabled="true" levels.per.tree="10" />
       <filter>
         <inheritancemap />
@@ -479,8 +497,14 @@
           <textpattern name="agentname" type="contains" enabled="true" />
           <textpattern name="agenthost" type="contains" enabled="true" />
         </criterion>
-        <criterion mode="all" type="applications" />
-        <criterion type="btm" />
+        <criterion mode="SELECTED_APPLICATIONS" patternstring="" type="applications" matchmode="contains">
+          <applicationmetadata name="SiteGenesis" isdefault="false" />
+        </criterion>
+        <criterion type="btm">
+          <record legacymode="false" context="EndUser" configuredforfullsplit="true" transaction="Web Page Actions">
+            <splitpattern stringmatch="3" equalstoemptystring="true" measurename="" textpattern="Loading of Page /on/demandware.store/Sites-SiteGenesis-Site" />
+          </record>
+        </criterion>
         <criterion mode="all" type="hosts" completepurepath="true" />
         <criterion type="timeframe">
           <timeframe type="Last 15min" />
@@ -488,7 +512,10 @@
         <criterion useendtimefortimeframefilter="false" type="visits">
           <visitidset />
         </criterion>
-        <inheritancemap />
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="applications" />
+          <inheritanceentry inherited="false" type="btm" />
+        </inheritancemap>
       </filter>
       <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
       <sashconfig displayoption="CHART" weights="500,500" />
@@ -506,26 +533,33 @@
             </lightweightuniquemeasureidentifier>
             <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,192,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="cd8a95d8-802d-43de-98a4-fafe894538e6" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Perceived Render Time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="3" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(128,192,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="cd8a95d8-802d-43de-98a4-fafe894538e6" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Perceived Render Time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="2" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
             <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions (Perceived Render Time;Page Actions;Perceived Render Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions (Perceived Render Time;Page Actions;Perceived Render Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
             <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="089c2e6e-8243-4902-b7b0-e9c8dbc0526f" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - User Action Response Time" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="2" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="089c2e6e-8243-4902-b7b0-e9c8dbc0526f" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - User Action Duration" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
             <tagtolabel>
               <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
             <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
             <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
-          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(0,0,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="57561c7e-b096-45d3-8a71-db3c2fdc6b33" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(64,0,192,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="59ec7b67-b5c7-42cd-87c7-73273c6075de" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Visually Complete Time" overridesource="false" fetchmeasurecolor="true" position="3" uiunit="ms">
             <tagtolabel>
-              <taglabelentry value="Page Actions - Name" key="BTSP1" />
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
             </tagtolabel>
-            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
-            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" measurerate="purepath" />
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions (Visually Complete Time;Page Actions;Visually Complete Time)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions (Visually Complete Time;Page Actions;Visually Complete Time)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SalesforceCommerceCloud" sourcecolor="RGB(64,0,128,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SalesforceCommerceCloud" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="6b63ed6a-37f4-48c3-8fca-679db4ef2519" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Web Page Actions - Speed Index" overridesource="false" fetchmeasurecolor="true" position="4" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SalesforceCommerceCloud" application="" parentkeyid="Web Page Actions (Speed Index;Page Actions;Speed Index)" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Web Page Actions (Speed Index;Page Actions;Speed Index)" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Web Page Actions" transactioncontext="EndUser" measurerate="purepath" />
           </chartsource>
           <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
         </chart>

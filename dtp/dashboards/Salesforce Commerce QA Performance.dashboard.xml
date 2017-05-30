@@ -2,8 +2,8 @@
 <!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
 <!-- Manual changes can cause severe problems and system instability -->
 <!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
-<dynatrace version="6.5.8.1013" date="2/3/17 4:20 PM">
-  <dashboardconfig memento.version="6.5.8.1013" suppresssavewarning="false" created="2017-02-03T16:20:38-0700" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://SelectYourServer" sessionid="SalesforceCommerceCloud" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="0000015a-0647-9170-a448-9db03ba949a4" locationassource="false" localizationenabled="false" name="Salesforce Commerce QA Performance" authorname="dmabxw0" modified="2017-02-03T16:20:38-0700" id="fe52a416-fa98-441b-bbce-a030759767fe">
+<dynatrace version="7.0.0.2346" date="5/30/17 12:46 PM">
+  <dashboardconfig memento.version="7.0.0.2346" suppresssavewarning="false" created="2017-05-30T12:46:48-0600" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://SelectYourServer" sessionid="SalesforceCommerceCloud" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="0000015c-5aae-8dc0-9b1c-dab3a010975d" locationassource="false" localizationenabled="false" name="Salesforce Commerce QA Performance" authorname="dmabxw0" modified="2017-05-30T12:46:48-0600" id="8d4cf33a-b695-4659-9041-a1684a9ccfcf">
     <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
     <filter>
       <criterion type="admfilteranalyzer" />
@@ -13,14 +13,14 @@
       </criterion>
       <criterion type="and" />
       <criterion mode="all" excludeexternalsubpaths="false" type="api" />
-      <criterion mode="all" type="applications" />
+      <criterion mode="ALL" patternstring="" type="applications" matchmode="contains" />
       <criterion type="btm" />
       <criterion type="casuemdimension" />
       <criterion type="dbdetails" />
       <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
       <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
       <criterion mode="all" type="hosts" completepurepath="true" />
-      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion severitiesmode="all" statesmode="all" matchpattern="" assignees="" type="incident" matchstring="contains" rulesmode="ALL" severities="" states="" />
       <criterion type="or" />
       <criterion mode="all" enduser="false" type="purepaths" />
       <criterion includemeasurename="true" includeplatform="true" includetestname="true" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,MISSING,passed" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API,EXTERNAL" />
@@ -46,25 +46,25 @@
       </criterion>
     </filter>
     <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
-    <designconfig autoscroll="false" namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <designconfig autoscroll="false" namefontsize="10" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
     <dashboardlayout>
       <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="ddab8dc2-e6a8-40f7-ae27-dffac510d676" folderid="folder" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
-        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+        <designconfig namefontsize="10" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
       <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="7893e1d7-db0c-459d-9566-ae6523b53195" folderid="org.eclipse.ui.internal.ViewStack@3746749" relatedfolderid="folder" ratio="0.49947202">
-        <designconfig namefontsize="18" descriptionshow="true" headertype="HEADLESS" namefontcolor="58,142,216" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+        <designconfig namefontsize="18" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="HEADLESS" namefontcolor="58,142,216" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
       <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="7de2c45d-b0a6-451d-a474-98ef3b8583f0" folderid="org.eclipse.ui.internal.ViewStack@2fdbd353" relatedfolderid="org.eclipse.ui.internal.ViewStack@3746749" ratio="0.5">
-        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" namefontcolor="58,142,216" nameshow="true" descriptionfontstyle="NORMAL" namealignment="LEFT" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+        <designconfig namefontsize="18" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="CUSTOM" namefontcolor="58,142,216" nameshow="true" descriptionfontstyle="NORMAL" namealignment="LEFT" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
       <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="77a97d6f-37c7-4901-b93d-f482c80bb8cc" folderid="org.eclipse.ui.internal.ViewStack@3d150d83" relatedfolderid="org.eclipse.ui.internal.ViewStack@3746749" ratio="0.4978903">
-        <designconfig namefontsize="10" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+        <designconfig namefontsize="10" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
       <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="6a9fc07c-51e9-4de9-8bcb-450008a6fd0b" folderid="org.eclipse.ui.internal.ViewStack@983f21e" relatedfolderid="org.eclipse.ui.internal.ViewStack@3746749" ratio="0.5">
-        <designconfig namefontsize="18" descriptionshow="true" headertype="CUSTOM" namefontcolor="58,142,216" nameshow="true" descriptionfontstyle="NORMAL" namealignment="LEFT" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+        <designconfig namefontsize="18" dashletheight="0" dashletwidth="0" descriptionshow="true" headertype="CUSTOM" namefontcolor="58,142,216" nameshow="true" descriptionfontstyle="NORMAL" namealignment="LEFT" namefontstyle="BOLD" descriptionfontsize="8" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
       </portletfolder>
     </dashboardlayout>
-    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="UseBackgroundImageHeight" locationascomparesource="false" source="server://bw-dyna-63" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="QA Performance" folderid="folder" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(58,142,216,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="ddab8dc2-e6a8-40f7-ae27-dffac510d676">
+    <portletconfig usedashboardsourceforcompare="true" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://bw-dyna-63" folderid="folder" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(58,142,216,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="ddab8dc2-e6a8-40f7-ae27-dffac510d676" usespecificautorefresh="false" heightmode="UseBackgroundImageHeight" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="QA Performance" locationassource="false" offerthresholdcolors="false" name="Text and Image" thresholdcolors="true">
       <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="3" enabled="true" levels.per.tree="10" />
       <filter>
         <inheritancemap />
@@ -86,7 +86,7 @@
         <criterion mode="INACTIVE" type="analysiscache" />
         <criterion type="and" />
         <criterion mode="all" excludeexternalsubpaths="false" type="api" />
-        <criterion mode="all" type="applications" />
+        <criterion mode="ALL" patternstring="" type="applications" matchmode="contains" />
         <criterion type="btm" />
         <criterion type="casuemdimension" />
         <criterion type="dbdetails" />
@@ -159,7 +159,7 @@
       </datamodelconfig>
       <analyzerparameters analyzerrecordlimit="100000" requiredrilldowndata="true" />
     </portletconfig>
-    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://bw-dyna-63" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@3d150d83" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(58,142,216,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="77a97d6f-37c7-4901-b93d-f482c80bb8cc">
+    <portletconfig usedashboardsourceforcompare="true" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://bw-dyna-63" folderid="org.eclipse.ui.internal.ViewStack@3d150d83" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(58,142,216,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="77a97d6f-37c7-4901-b93d-f482c80bb8cc" usespecificautorefresh="false" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" offerthresholdcolors="false" name="Text and Image" thresholdcolors="true">
       <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="7" enabled="true" levels.per.tree="10" />
       <filter>
         <inheritancemap />
@@ -168,7 +168,7 @@
       <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
       <font name="" style="NORMAL" height="2" />
     </portletconfig>
-    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://bw-dyna-63" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" folderid="org.eclipse.ui.internal.ViewStack@3746749" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(58,142,216,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="7893e1d7-db0c-459d-9566-ae6523b53195">
+    <portletconfig usedashboardsourceforcompare="true" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" source="server://bw-dyna-63" folderid="org.eclipse.ui.internal.ViewStack@3746749" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(58,142,216,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="7893e1d7-db0c-459d-9566-ae6523b53195" usespecificautorefresh="false" heightmode="AdjustToFontSize" locationascomparesource="false" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" locationassource="false" offerthresholdcolors="false" name="Text and Image" thresholdcolors="true">
       <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="7" enabled="true" levels.per.tree="10" />
       <filter>
         <inheritancemap />
@@ -187,7 +187,7 @@
         <criterion mode="INACTIVE" type="analysiscache" />
         <criterion type="and" />
         <criterion mode="all" excludeexternalsubpaths="false" type="api" />
-        <criterion mode="all" type="applications" />
+        <criterion mode="ALL" patternstring="" type="applications" matchmode="contains" />
         <criterion type="btm" />
         <criterion type="casuemdimension" />
         <criterion type="dbdetails" />
@@ -207,7 +207,7 @@
       <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
       <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
       <datamodelconfig>
-        <table sortcolumn="3" drawcolumn="-1" columnorder="0,1,28,3,4,31,30,29,5,26,27,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,2,24,25,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54">
+        <table sortcolumn="3" drawcolumn="-1" columnorder="0,1,28,3,4,31,30,29,5,26,27,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,2,24,25,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59">
           <column forcevisible="false" hidden="false" width="300" index="0" sort="None" />
           <column forcevisible="false" hidden="false" width="80" index="1" sort="None" />
           <column forcevisible="false" hidden="false" width="130" index="2" sort="None" />
@@ -263,6 +263,11 @@
           <column forcevisible="false" hidden="false" width="150" index="52" sort="None" />
           <column forcevisible="false" hidden="false" width="150" index="53" sort="None" />
           <column forcevisible="false" hidden="false" width="150" index="54" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="55" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="56" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="57" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="58" sort="None" />
+          <column forcevisible="false" hidden="false" width="150" index="59" sort="None" />
         </table>
         <structurebuilderconfig>
           <structure filter="true" showsingleactions="true" advanced="false" showpageloads="true" showcustomactions="true" showframeloads="false" grouping="Action" showtiminginfo="false" />
@@ -281,7 +286,7 @@
           </table>
         </detailstableconfig>
       </datamodelconfig>
-      <analyzerparameters showcrashes="false" isonlylandingpages="false" includeendvisitactions="false" analyzerrecordlimit="100000" requiredrilldowndata="true" includeserversidepaths="false" />
+      <analyzerparameters showcrashes="false" readbusinesstransactions="false" isonlylandingpages="false" includeendvisitactions="false" analyzerrecordlimit="100000" requiredrilldowndata="true" includeserversidepaths="false" />
       <ccontent enabled="first" ratio="0.5" />
     </portletconfig>
   </dashboardconfig>

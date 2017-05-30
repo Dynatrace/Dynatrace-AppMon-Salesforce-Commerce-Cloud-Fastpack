@@ -12,7 +12,7 @@
 <resource resource="dashboards/Salesforce Commerce QA Performance.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/Salesforce Commerce Third Party Performance.dashboard.xml" resource_type="dashboard">
+<resource resource="dashboards/Salesforce Commerce Third Party CDN Performance.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
 	         	</resource>
 <resource resource="dashboards/Salesforce Commerce UEM Key Metrics Dashboard.dashboard.xml" resource_type="dashboard">
@@ -20,17 +20,17 @@
 	         	</resource>
 <resource resource="dashboards/Salesforce Commerce Web Page Performance.dashboard.xml" resource_type="dashboard">
 	            	<instance instance="server"/>
-	         	</resource>         	
-<resource resource="dashboards/web/88f68dc6-a19d-4d86-8fae-444001be815a.json" resource_type="resource" target_dir="conf/dashboards/web">
+	         	</resource>
+<resource resource="dashboards/web/9e05ec5a-55d1-40af-b84a-2e730262b476.json" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/web/88f68dc6-a19d-4d86-8fae-444001be815a.xml" resource_type="resource" target_dir="conf/dashboards/web">
+<resource resource="dashboards/web/9e05ec5a-55d1-40af-b84a-2e730262b476.xml" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/web/689428dd-3753-407b-9583-396ca69b0a6c.json" resource_type="resource" target_dir="conf/dashboards/web">
+<resource resource="dashboards/web/09f6a878-ee06-4871-92be-8d665ddba65c.json" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
-<resource resource="dashboards/web/689428dd-3753-407b-9583-396ca69b0a6c.xml" resource_type="resource" target_dir="conf/dashboards/web">
+<resource resource="dashboards/web/09f6a878-ee06-4871-92be-8d665ddba65c.xml" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
 <resource resource="dashboards/web/27513573-97d8-4680-81c3-be20ae3cf59e.json" resource_type="resource" target_dir="conf/dashboards/web">
@@ -39,12 +39,30 @@
 <resource resource="dashboards/web/27513573-97d8-4680-81c3-be20ae3cf59e.xml" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
+<resource resource="dashboards/web/a6e24d51-e514-4258-b581-0b42ddd04095.json" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/a6e24d51-e514-4258-b581-0b42ddd04095.xml" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/be04cccf-8fcd-4623-8794-630f9a525b2a.json" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/be04cccf-8fcd-4623-8794-630f9a525b2a.xml" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/d861fa6d-b2aa-457a-a043-d52c68908d96.json" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
+<resource resource="dashboards/web/d861fa6d-b2aa-457a-a043-d52c68908d96.xml" resource_type="resource" target_dir="conf/dashboards/web">
+	            	<instance instance="server"/>
+	         	</resource>
 <resource resource="dashboards/web/ef81fe32-3c29-4d59-afc7-99aa1514f818.json" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
 	         	</resource>
 <resource resource="dashboards/web/ef81fe32-3c29-4d59-afc7-99aa1514f818.xml" resource_type="resource" target_dir="conf/dashboards/web">
 	            	<instance instance="server"/>
-	         	</resource>       	
+	         	</resource>
 <resource resource="profiles/SalesforceCommerceCloud.profile.xml" resource_type="systemProfile">
 		            <instance instance="server"/>
 		        </resource>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
-<!-- Manual changes can cause severe problems and system instability -->
-<!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
-<dynatrace version="6.5.8.1013">
-  <webuidashboard memento.version="6.5.8.1013">
-    <metadata owner="admin" name="Salesforce Commerce Cloud Business Dashboard" id="689428dd-3753-407b-9583-396ca69b0a6c" modificationdate="1486742826211" sharemode="PUBLIC_SHARED" version="24" revision="9965ffd5-7eea-4378-a4a5-f08e352f0151" />
-  </webuidashboard>
-</dynatrace>
