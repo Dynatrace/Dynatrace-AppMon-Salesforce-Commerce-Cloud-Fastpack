@@ -30,21 +30,20 @@ To learn more about metadata measures, please refer to [Dynatrace documentation]
 
 ### Customization #2: Conversion Goal
 
-The Conversion Goal is a Page/User action used to identify when a user completes an order. Using a conversion goal has many benefits to understanding the conditions under which a user did or did not complete a purchase. While there is only one CSS Selector used, two measures exist as the syntax captured by web vs. mobile web is very different. As with the example in the fastpack, you may find there's a different conversion target for mobile vs. desktop web. You can add multiple conversion goals.
+The Conversion Goal is a Page/User action used to identify when a user completes an order. Using a conversion goal has many benefits to understanding the conditions under which a user did or did not complete a purchase. 
 
-In the Salesforce Commerce Fastpack, we configured the Conversion Goal to be set to a measures called OrderConfirmationNumber and OrderConfirmationMobileWeb. Both of these measures are based on CSS Selector Meta Measures that pick up the order id from the order confirmation page.:
-
+In the Salesforce Commerce Fastpack, we configured the Conversion Goal to be set to a measure called OrderConfirmationNumber. This measures is based on a CSS Selector Meta Measure that picks up the order id from the order confirmation page.
 
 You can change your conversion goal by substituting any other measure you create.
 
 #### Conversion Goal UEM & CSS Selector:
-![Conversion Goal UEM & CSS Selector](/images_community/download/attachments/215745785/Conversion.png)
+![Conversion Goal UEM & CSS Selector](/images_community/download/attachments/215745785/AM7_Conversion.png)
 
 #### Conversion Goal Measure
-![Conversion Goal Measure](/images_community/download/attachments/215745785/OrderConfirmationMeasures.png)
+![Conversion Goal Measure](/images_community/download/attachments/215745785/AM7_OrderConfirmationMeasures.png)
 
 ### Customization #3: Orders and Revenue
-In order to track orders and revenue from orders over time, a User Action business transaction called Orders was created. This is slightly different than standard conversions as a conversion is visit based. If a user makes multiple orders in a single visit, that counts as 1 conversion. However, since I've personally made several orders on commerce sites in a single visit, I thought it would be best to track orders and revenue by the occurence based on User Actions. This way, if multiple orders are made in a single visit, each order and revenue value will be tracked. This Business transaction looks for every occurence of a user landing on the OrderConfirmationPage and tracks the number of occurences and PurchaseValue. These can additionally be split by client type/family, country, User Experience Index of Visit, Operating System or Application
+In order to track orders and revenue from orders over time, a User Action business transaction called Orders was created. This is slightly different than standard conversions as a conversion is visit based. If a user makes multiple orders in a single visit, that counts as 1 conversion. However, since I've personally made several orders on commerce sites in a single visit, I thought it would be best to track orders and revenue by the occurence based on User Actions. This way, if multiple orders are made in a single visit, each order and revenue value will be tracked. This Business transaction looks for every occurence of a user landing on the OrderConfirmationPage and tracks the number of occurrences, PurchaseValue and Client Errors on the page. These can additionally be split by client type/family, country, User Experience Index of Visit, Operating System or Application
 
 The Business Transaction is reliant on eight measures, two of which you will have to customize to your environment:
 - OrderConfirmationPage
@@ -57,7 +56,7 @@ The Business Transaction is reliant on eight measures, two of which you will hav
 - Application
 
 #### Orders Business Transaction
-![Orders BT](/images_community/download/attachments/215745785/OrdersBT.png)
+![Orders BT](/images_community/download/attachments/215745785/AM7_OrdersBT.png)
 
 The two measures you will likely have to customize are:
 - OrderConfirmationPage
@@ -108,24 +107,38 @@ The PurchaseValue measure is simply a JavaScript ADK Value (User Actions) measur
 
 ### Customization #4: Abandoned Cart
  
-The Abandoned Cart measure counts the number of Visits where users added at least one item to their cart but did not purchase. Along with counting how many abandoned carts there are in a given time period, the business transaction also tracks which pages customers are abandoning on, the response time of the exit page, the monetary value of the abandoned cart, the Client Type and Family of the Visits as well as the User Experience Reason of the visit.
+The Abandoned Cart measure counts the number of Visits where users added at least one item to their cart but did not purchase. Along with counting how many abandoned carts there are in a given time period, the business transaction also tracks which pages customers are abandoning on, the response time of the exit page, the monetary value of the abandoned cart, the Client Type and Family of the Visits, number of client errors in the visit, user experience of the visit, User Experience Reason of the visit, Landing page of the visit, Operating System and Country. 
  
- The Business Transaction is reliant on nine measures, two of which you will have to customize to your environment:
+ The Business Transaction is reliant on 14 measures, two of which you will have to customize to your environment:
 - Add to Cart User Action Count: a User Action Count measure based on the syntax of your store's Add To Cart button.
 - miniCartValue: a measure that evaluates the numeric value of the cart passed to Dynatrace via the JavaScript ADK
 - Non Conversion Goal: A conversion goal measure that tracks when users don't convert. This only works when the Conversion Goal is set as in Customization #2
-- User Action Response Time: A measure that will track the response time of the Abandoned Cart Visit's Exit page.
+- User Action Duration: A measure that will track the response time of the Abandoned Cart Visit's Exit page.
+- Count Client Errors: a measure that counts the total client errors during the visit
+- User Experience Index
+- User Experience Index of Visits Reason: a splitting that tells the reason for the UE Index.
 - Client Family of Visits: this measure will split the abandoned carts by Browser make (firefox, chrome mobile, etc)
 - Client Type of Visits: this measure will split the abandoned carts by browser type of visit (Desktop, mobile, synthetic)
 - Visits - Exit Page - BT: a measure that captures the exit page of a visit
+- Country of Visits: A splitting to analyse lost revenue by Country
+- Landing Page of Visits: a splitting to show landing page of visits to help determine lost revenue by site entry point.
+- Operating System of Visits: a splitting which helps track lost revenue by the User's OS
 - Application: If you define more than one application
 
 #### Abandoned Cart Business Transaction
-![AbandonedCart BT](/images_community/download/attachments/215745785/AbandonedCartBT.png)
+![AbandonedCart BT](/images_community/download/attachments/215745785/AM7_AbandonedCartBT.png)
 
 The two measures you will likely have to customize are:
 - Add to Cart User Action Count
 - miniCartValue
+
+#### Additional Abandoned Cart Business Transactions
+
+In the AppMon 7 Fastpack, there are 3 additional Abandoned Cart Business Transactions to help with analysis of abandoned carts and are used in the web dashboards.
+- Abandoned Cart - Client Errors: which tracks abandoned carts with client errors.
+- Abandoned Cart - Not Satisfied: which tracks abandoned carts with a user experience of Not Satisfied (Tolerating or Frustrated)
+- Abandoned Cart - Client Errors: which tracks abandoned carts where there were slow user actions. The default threshold is that there is a single user action (max) with a duration of 10 seconds or over. The measure "User Action >= 10 seconds" can be edited if you prefer a different. Or, if you prefer to use a metric like Visually Complete, simply create a new visually complete measure modeled on this measure and replace it in the Business Transaction.
+
 
 #### Add to Cart User Action Count
 This measure is based upon the button name of Add to Cart. The value the measure is looking for is an action name regular expression:
